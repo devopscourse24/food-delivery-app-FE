@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {API_URL_RL} from "../../constants/url";
+import {K8ExternalIp} from "../../constants/url";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {catchError, Observable, throwError} from "rxjs";
 
@@ -11,7 +11,7 @@ import {catchError, Observable, throwError} from "rxjs";
 export class RestaurantService {
 
   // URL de l'API, utilisé pour construire les requêtes HTTP
-  private apiUrl = `${API_URL_RL}/restaurant/fetchAllRestaurants`;
+  private apiUrl = `${K8ExternalIp}/restaurant/fetchAllRestaurants`;
 
   // Injection du service HttpClient dans le constructeur pour effectuer des requêtes HTTP
   constructor(private http: HttpClient) { }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { API_URL_Order } from "../../constants/url"; // Importe l'URL de base à partir des constantes
+import {K8ExternalIp} from "../../constants/url"; // Importe l'URL de base à partir des constantes
 import { HttpClient, HttpHeaders } from "@angular/common/http"; // Importe HttpClient pour faire des requêtes HTTP, HttpHeaders pour définir les en-têtes de la requête
 import { Observable, throwError } from "rxjs"; // Importe Observable pour le traitement asynchrone, throwError pour la gestion des erreurs
 
@@ -9,7 +9,7 @@ import { Observable, throwError } from "rxjs"; // Importe Observable pour le tra
 })
 export class OrderService {
 
-  private apiUrl = API_URL_Order + '/order/saveOrder'; // Construit l'URL complète pour l'API de sauvegarde des commandes
+  private apiUrl = K8ExternalIp + '/order/saveOrder'; // Construit l'URL complète pour l'API de sauvegarde des commandes
 
   constructor(private http: HttpClient) { } // Injecte le service HttpClient pour effectuer des requêtes HTTP
 

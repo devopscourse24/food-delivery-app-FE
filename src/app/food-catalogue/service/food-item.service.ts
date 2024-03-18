@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import {API_URL_FC} from "../../constants/url";
+import {K8ExternalIp} from "../../constants/url";
 //import { K8ExternalIp } from 'src/app/constants/url'; // Assurez-vous que le chemin d'accès est correct pour votre structure de projet
 
 // Le décorateur Injectable permet à ce service d'être injecté dans d'autres classes
@@ -12,7 +12,7 @@ import {API_URL_FC} from "../../constants/url";
 export class FoodItemService {
 
   // L'URL de base pour les API de catalogue de nourriture, utilisant une adresse IP externe de Kubernetes
-  private apiUrl = `${API_URL_FC}/foodCatalogue/fetchRestaurantAndFoodItemsById/`;
+  private apiUrl = `${K8ExternalIp}/foodCatalogue/fetchRestaurantAndFoodItemsById/`;
 
   // Le constructeur injecte le client HTTP d'Angular pour faire des appels HTTP
   constructor(private http: HttpClient) { }
