@@ -19,3 +19,4 @@ COPY --from=build /app/dist/food-delivery-app /usr/share/nginx/html
 EXPOSE 80
 # Démarre Nginx en mode foreground pour éviter de s'exécuter en arrière-plan.
 CMD ["nginx", "-g", "daemon off;"]
+
